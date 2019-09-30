@@ -1302,7 +1302,13 @@ vg_prefix_context_add_patterns(vg_context_t *vcp,
 							  patterns[i],
 							  ranges, NULL);
 			}
-
+else {
+			if (false) {
+				fprintf(stderr,
+					"Prefix '%s' is too long\n",
+					patterns[i]);
+				continue;
+			}
 		}
 
 			if (caseiter.ci_nbits > 16) {
