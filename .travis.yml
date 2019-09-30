@@ -3,4 +3,4 @@ before_install: sudo apt update && sudo apt install -y libssl-dev
 jobs:
   include:
     - stage: test
-      script: make && ./vanitygen 15w95pznz362FvFHMfmLn1AYrLQcjKnHUB
+      script: make && ./vanitygen 1foxxo
