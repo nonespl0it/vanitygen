@@ -1,7 +1,6 @@
 language: cpp
-os: osx
-before_install: brew install openssl
+before_install: apt update && apt install -y libssl-dev
 jobs:
   include:
     - stage: test
-      script: make && ./vanitygen 1foxxo
+      script: make && ./vanitygen 15w95pznz362FvFHMfmLn1AYrLQcjKnHUB
