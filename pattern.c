@@ -721,7 +721,7 @@ get_prefix_ranges(int addrtype, const char *pfx, BIGNUM **result,
 			if (c == 0) {
 				/* Add another zero prefix */
 				zero_prefix++;
-				if (zero_prefix > 6000) {
+				if (zero_prefix > 19) {
 					fprintf(stderr,
 						"Prefix '%s' is too long\n",
 						pfx);
@@ -769,7 +769,7 @@ get_prefix_ranges(int addrtype, const char *pfx, BIGNUM **result,
 		}
 		b58ceil = BN_get_word(bnap);
 
-		if ((b58pow - (p - zero_prefix)) < 6000) {
+		if ((b58pow - (p - zero_prefix)) < 6) {
 			/*
 			 * Do not allow the prefix to constrain the
 			 * check value, this is ridiculous.
@@ -1302,14 +1302,15 @@ vg_prefix_context_add_patterns(vg_context_t *vcp,
 							  patterns[i],
 							  ranges, NULL);
 			}
-else {
-			if (0 == 1) {
+
+		} else {
+			/* Case-enumerate the prefix */
+			if (!prefix_case_iter_init(&caseiter, patterns[i])) {
 				fprintf(stderr,
 					"Prefix '%s' is too long\n",
 					patterns[i]);
 				continue;
 			}
-		}
 
 			if (caseiter.ci_nbits > 16) {
 				fprintf(stderr,
