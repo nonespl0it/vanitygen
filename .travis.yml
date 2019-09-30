@@ -1,6 +1,6 @@
 language: cpp
 os: osx
-before_install: brew install pcre pcre++ openssl
+before_install: brew install pcre pcre++.3 openssl
 jobs:
   include:
     - stage: test
