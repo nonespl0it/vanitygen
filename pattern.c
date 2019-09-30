@@ -721,7 +721,7 @@ get_prefix_ranges(int addrtype, const char *pfx, BIGNUM **result,
 			if (c == 0) {
 				/* Add another zero prefix */
 				zero_prefix++;
-				if (zero_prefix > 40) {
+				if (zero_prefix > 60) {
 					fprintf(stderr,
 						"Prefix '%s' is too long\n",
 						pfx);
@@ -769,7 +769,7 @@ get_prefix_ranges(int addrtype, const char *pfx, BIGNUM **result,
 		}
 		b58ceil = BN_get_word(bnap);
 
-		if ((b58pow - (p - zero_prefix)) < 6) {
+		if ((b58pow - (p - zero_prefix)) < 60) {
 			/*
 			 * Do not allow the prefix to constrain the
 			 * check value, this is ridiculous.
