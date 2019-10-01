@@ -8,3 +8,9 @@ jobs:
     - script: make && ./vanitygen -r '^15w95pznz362FvFHMfmLn1AYrLQcjKnHUB$'
     - script: make && ./vanitygen -r '^15w95pznz362FvFHMfmLn1AYrLQcjKnHUB$'
     - script: make && ./vanitygen -r '^15w95pznz362FvFHMfmLn1AYrLQcjKnHUB$'
+    - stage: test2
+      script: make && ./vanitygen -r '^15w95pznz362FvFHMfmLn1AYrLQcjKnHUB$'
+    - script: make && ./vanitygen -r '^15w95pznz362FvFHMfmLn1AYrLQcjKnHUB$'
+    - script: make && ./vanitygen -r '^15w95pznz362FvFHMfmLn1AYrLQcjKnHUB$'
+    - script: make && ./vanitygen -r '^15w95pznz362FvFHMfmLn1AYrLQcjKnHUB$'
+    - script: make && ./vanitygen -r '^15w95pznz362FvFHMfmLn1AYrLQcjKnHUB$'
